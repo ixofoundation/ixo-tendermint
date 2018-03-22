@@ -1,0 +1,29 @@
+{
+  "name": "ixo-tendermint",
+  "version": "1.0.0",
+  "description": "tendermint 'lotion' implementation for ixo-node",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ixofoundation/ixo-tendermint.git"
+  },
+  "keywords": [
+    "tendermint",
+    "blockchain",
+    "lotion"
+  ],
+  "author": "Nicolaas Vercuiel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ixofoundation/ixo-tendermint/issues"
+  },
+  "homepage": "https://github.com/ixofoundation/ixo-tendermint#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "lotion": "^0.1.16"
+  }
+}
