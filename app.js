@@ -2,7 +2,7 @@
 require('dotenv').config();
 let lotion = require('lotion')
 
-let initialState = { count: 0, blockCount: 0, foo: { bar: { beep: 'boop' } } }
+let initialState = { txn_count: 0, blockCount: 0, claim: { data: {} } }
 
 let port = process.env.PORT
 let app = lotion({
@@ -17,9 +17,12 @@ let app = lotion({
   devMode: true
 });
 
-app.use((state, tx) => {
+app.use((state, txn) => {
   // validate tx, mutate state if it's valid.
-  state.count++
+  state.claim.data = txn.data;
+  state.txn_count++;
+  console.log("TXN: " + JSON.stringify(txn, null, '\t'));
+  console.log("State: " + JSON.stringify(state, null, '\t'));
 });
 
 app.useBlock(state => {
