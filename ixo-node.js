@@ -16,7 +16,7 @@ let app = lotion({
 app.use((state, tx, chainInfo) => {
     if (typeof tx.sender === 'string' && typeof tx.message === 'string') {
         state.txn_count++;
-        state.messages.push({ sender: tx.sender, message: tx.message })
+        state.messages.push({ sender: tx.sender, message: tx.message });
     }
 });
 
