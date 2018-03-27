@@ -29,7 +29,7 @@ APP_PORT_1 = "3000"                      # The Node 1 lotion app port
 PEER_CONNECTIONS_2 = "localhost:46660"   # The machine and port of Node 1
 TENDERMINT_PORT_2 = "46658"              # The tendermint port of Node 2 See http://localhost:46658
 P2P_PORT_2 = "46661"                     # The p2p port for Node 2 (should be the port configured in the PEER_CONNECTIONS of Node 1)
-APP_PORT_2 = "3001"                     # The Node 2 lotion app port
+APP_PORT_2 = "3001"                      # The Node 2 lotion app port
 ```
 
 ## Running the nodes
