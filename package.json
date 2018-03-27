@@ -2,9 +2,9 @@
   "name": "ixo-tendermint",
   "version": "1.0.0",
   "description": "tendermint 'lotion' implementation for ixo-node",
-  "main": "ixo-node1.js",
+  "main": "ixo-node.js",
   "scripts": {
-    "node1": "node ixo-node1.js",
+    "node1": "node ixo-node.js",
     "node2": "node ixo-node2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

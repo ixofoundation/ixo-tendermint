@@ -1,22 +1,28 @@
+require('dotenv').config();
 let lotion = require('lotion');
 
 let app = lotion({
     genesis: 'genesis.json',
+    createEmptyBlocks: false,
+    tendermintPort: process.env.TENDERMINT_PORT_2,
     initialState: { messages: [] },
-    p2pPort: 46661,
-    tendermintPort: 46658,
+    p2pPort: process.env.P2P_PORT_2,
     logTendermint: true,
-    peers: ['localhost:46660'],
+    peers: [process.env.PEER_CONNECTIONS_2],
     keys: 'privkey1.json',
-    devMode: true
+    devMode: false
 });
 
-app.use((state, tx) => {
+app.use((state, tx, chainInfo) => {
     if (typeof tx.sender === 'string' && typeof tx.message === 'string') {
         state.messages.push({ sender: tx.sender, message: tx.message });
     }
 });
 
-app.listen(3001).then(({ GCI }) => {
+app.useBlock(function (state, chainInfo) {
+    // do something once per block here
+});
+
+app.listen(process.env.APP_PORT_2).then(({ GCI }) => {
     console.log(GCI)
 });
