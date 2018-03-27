@@ -2,9 +2,10 @@
   "name": "ixo-tendermint",
   "version": "1.0.0",
   "description": "tendermint 'lotion' implementation for ixo-node",
-  "main": "app.js",
+  "main": "ixo-node1.js",
   "scripts": {
-    "start": "node app.js",
+    "node1": "node ixo-node1.js",
+    "node2": "node ixo-node2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,6 @@
   "homepage": "https://github.com/ixofoundation/ixo-tendermint#readme",
   "dependencies": {
     "dotenv": "^5.0.1",
-    "lotion": "^0.1.16"
+    "lotion": "^0.1.17"
   }
 }
