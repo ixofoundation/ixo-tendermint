@@ -68,5 +68,5 @@ and to Node 2
 
 
 ```sh
-curl http://localhost:3000/txs -d '{"sender": "Nic", "message": "Hello Node 2"}'
+curl http://localhost:3001/txs -d '{"sender": "Nic", "message": "Hello Node 2"}'
 ```
