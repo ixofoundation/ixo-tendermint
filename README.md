@@ -56,7 +56,17 @@ and
 node ixo-node2.js
 ```
 
+## Sending messages to app
+
+To send a message to Node 1
+
+```sh
+curl http://localhost:3000/txs -d '{"sender": "Nic", "message": "Hello Node 1"}'
+```
+
+and to Node 2
 
 
-Send message:
-curl http://localhost:3000/txs -d '{"sender": "Nic", "message": "Hello"}'
+```sh
+curl http://localhost:3000/txs -d '{"sender": "Nic", "message": "Hello Node 2"}'
+```
