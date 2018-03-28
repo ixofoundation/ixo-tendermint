@@ -58,6 +58,5 @@ typings/
 .env
 
 # .lotion folders
-./node1/.lotion
-./node2/.lotion
+.lotion
 
