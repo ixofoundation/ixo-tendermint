@@ -1,5 +1,7 @@
 # ixo-tendermint
 
+This project is configured to run two nodes locally.  There are two sub folders for the node specific configurations for each node namely: `./node1` and `./node2`
+
 ## Setup
 Clone the repository and run install
 
@@ -11,10 +13,11 @@ npm i
 
 ### Setup the environment files
 
-Copy the example environment file and update if necessary
+Copy the example environment file for each node and update if necessary
 
 ```sh
-cp .env-example .env
+cp ./node1/.env-example ./node1/.env
+cp ./node2/.env-example ./node2/.env
 ```
 
 The `.env` contains the following config:
