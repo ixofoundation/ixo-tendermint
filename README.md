@@ -16,8 +16,8 @@ npm i
 Copy the example environment file for each node and update if necessary
 
 ```sh
-cp ./node1/.env-example ./node1/.env
-cp ./node2/.env-example ./node2/.env
+cp ./config/node1/.env-example ./config/node1/.env
+cp ./config/node2/.env-example ./config/node2/.env
 ```
 
 The `.env` contains the following config:
@@ -39,8 +39,8 @@ To create new private keys run
 
 Before running the nodes clean out the lotion directory in each node's folders )NOTE: This wipes out the blockchain data)
 ```sh
-rm -rf ./node1/.lotion
-rm -rf ./node2/.lotion
+rm -rf ./config/node1/.lotion
+rm -rf ./config/node2/.lotion
 ```
 
 Then run the two nodes in two shells
