@@ -1,0 +1,6 @@
+=============== Mar 28, 2018 (SAST) ===============
+09:38:25.978310 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+09:38:25.979040 db@open opening
+09:38:25.979598 version@stat F·[] S·0B[] Sc·[]
+09:38:25.979783 db@janitor F·2 G·0
+09:38:25.979817 db@open done T·752.515µs

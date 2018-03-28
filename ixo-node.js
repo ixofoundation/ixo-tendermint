@@ -4,12 +4,12 @@ let lotion = require('lotion');
 let app = lotion({
     genesis: 'genesis.json',
     createEmptyBlocks: false,
-    tendermintPort: process.env.TENDERMINT_PORT_1,
+    tendermintPort: process.env.TENDERMINT_PORT,
     initialState: { txn_count: 0, blockCount: 0, messages: [] },
-    p2pPort: process.env.P2P_PORT_1,
+    p2pPort: process.env.P2P_PORT,
     logTendermint: true,
-    peers: [process.env.PEER_CONNECTIONS_1],
-    keys: 'privkey0.json',
+    peers: [process.env.PEER_CONNECTIONS],
+    keys: process.env.PRIVKEY,
     devMode: false
 });
 
@@ -24,6 +24,6 @@ app.useBlock(function (state, chainInfo) {
     state.blockCount++;
 });
 
-app.listen(process.env.APP_PORT_1).then(({ GCI }) => {
+app.listen(process.env.APP_PORT).then(({ GCI }) => {
     console.log(GCI)
 });
