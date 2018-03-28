@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist",
+    "strictNullChecks": false,
+    "strict": true,
+    "lib": [
+      "es2015"
+    ],
+    "types": [
+      // add node as an option
+      "node"
+    ],
+    // typeRoots option has been previously configured
+    "typeRoots": [
+      // add path to @types
+      "node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "./node_modules/*",
+    "definitions",
+    "./dist/**/*"
+  ]
+}

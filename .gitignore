@@ -58,7 +58,10 @@ typings/
 .env
 
 # .lotion folders
-node1/.lotion
-node2/.lotion
+config/node1/.lotion
+config/node2/.lotion
+
+# .dist folder
+dist
 
 

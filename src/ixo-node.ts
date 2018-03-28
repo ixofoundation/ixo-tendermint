@@ -13,17 +13,19 @@ let app = lotion({
     devMode: false
 });
 
-app.use((state, tx, chainInfo) => {
+app.use((state: any, tx: any, chainInfoa: any) => {
     if (typeof tx.sender === 'string' && typeof tx.message === 'string') {
         state.txn_count++;
         state.messages.push({ sender: tx.sender, message: tx.message });
     }
 });
 
-app.useBlock(function (state, chainInfo) {
+app.useBlock(function (state: any, chainInfo: any) {
     state.blockCount++;
 });
 
-app.listen(process.env.APP_PORT).then(({ GCI }) => {
-    console.log(GCI)
+app.listen(process.env.APP_PORT).then((GCI : any) => {
+    console.log(GCI);
 });
+
+export {};
