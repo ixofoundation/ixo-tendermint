@@ -4,8 +4,8 @@
   "description": "tendermint 'lotion' implementation for ixo-node",
   "main": "ixo-node.js",
   "scripts": {
-    "node1": "tsc && node -r dotenv/config ./dist/ixo-node.js dotenv_config_path=./config/node1/.env",
-    "node2": "tsc && node -r dotenv/config ./dist/ixo-node.js dotenv_config_path=./config/node2/.env",
+    "node1": "tsc && cp ./config/node1/.env-example ./config/node1/.env && node -r dotenv/config ./dist/ixo-node.js dotenv_config_path=./config/node1/.env",
+    "node2": "tsc && cp ./config/node2/.env-example ./config/node2/.env && node -r dotenv/config ./dist/ixo-node.js dotenv_config_path=./config/node2/.env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

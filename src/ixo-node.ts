@@ -5,7 +5,7 @@ let app = lotion({
     genesis: 'genesis.json',
     createEmptyBlocks: false,
     tendermintPort: process.env.TENDERMINT_PORT,
-    initialState: { txn_count: 0, blockCount: 0, messages: [] },
+    initialState: { txn_count: 0, blockCount: 0, data: [] },
     p2pPort: process.env.P2P_PORT,
     logTendermint: true,
     peers: [process.env.PEER_CONNECTIONS],
@@ -13,19 +13,22 @@ let app = lotion({
     devMode: false
 });
 
-app.use((state: any, tx: any, chainInfoa: any) => {
-    if (typeof tx.sender === 'string' && typeof tx.message === 'string') {
+function txHandler(state: any, tx: any, chainInfo: any) {
+    console.log('TXN: ' + JSON.stringify(tx));
+    if (tx.jsonrpc === '2.0' && tx.method !== 'ping') {
         state.txn_count++;
-        state.messages.push({ sender: tx.sender, message: tx.message });
+        // Do stuff here 
     }
-});
+}
 
-app.useBlock(function (state: any, chainInfo: any) {
+function blockHandler(state: any, chainInfo: any) {
     state.blockCount++;
-});
+}
 
-app.listen(process.env.APP_PORT).then((GCI : any) => {
+app.use(txHandler);
+app.useBlock(blockHandler);
+app.listen(process.env.APP_PORT).then((GCI: any) => {
     console.log(GCI);
 });
 
-export {};
+export { };
