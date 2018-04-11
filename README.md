@@ -68,3 +68,10 @@ and to Node 2
 ```sh
 curl http://localhost:3001/txs -d '{"sender": "Nic", "message": "Hello Node 2"}'
 ```
+
+
+## DOCKER
+
+```sh
+docker run --env-file <ENV_FILE_LOCATION> -e PRIVKEY=<PRIVATE_KEY_LOCATION> -e LOTION_HOME=<LOTION_HOME_LOCATION> -e PEER_CONNECTIONS=<IP:PORT> <DOCKER_IMAGE_ID>
+```
