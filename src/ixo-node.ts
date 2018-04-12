@@ -2,7 +2,7 @@ require('dotenv').config();
 let lotion = require('lotion');
 
 let app = lotion({
-    genesis: 'genesis.json',
+    genesis: process.env.GENESIS_BLOCK,
     createEmptyBlocks: false,
     tendermintPort: process.env.TENDERMINT_PORT,
     initialState: { txn_count: 0, blockCount: 0, data: [] },
