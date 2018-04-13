@@ -4,6 +4,8 @@ echo Starting docker container...
 echo Please ensure that your privkey.json and genesis.json files are in the same folder as where you are running this script:
 
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+docker kill $(docker ps -q)
+docker rm $(docker ps -a -q)
 
 echo Pulling image from Docker HUB...
 docker pull 04110000/ixo-tendermint 
