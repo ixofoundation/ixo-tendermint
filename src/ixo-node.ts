@@ -15,9 +15,12 @@ let app = lotion({
 
 function txHandler(state: any, tx: any, chainInfo: any) {
     console.log('TXN: ' + JSON.stringify(tx));
+    console.log('JSONRPC : ' + tx.jsonrpc);
+    console.log('DATA : ' + tx.data);
     if (tx.jsonrpc === '2.0' && tx.method !== 'ping') {
+        console.log("TRUE");
         state.txn_count++;
-        // Do stuff here 
+        state.data.push(tx.data);
     }
 }
 
