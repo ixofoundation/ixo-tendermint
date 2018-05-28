@@ -1,3 +1,9 @@
+# NO LONGER IN USE PLEASE SEE ixo_cosmos PROJECT
+
+
+
+
+
 # ixo-tendermint
 
 This project is configured to run two nodes locally.  There are two sub folders for the node specific configurations for each node namely: `./node1` and `./node2`
