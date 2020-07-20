@@ -1,8 +1,4 @@
-# NO LONGER IN USE PLEASE SEE ixo_cosmos PROJECT
-
-
-
-
+# NO LONGER IN USE PLEASE SEE [ixo-blockchain](https://github.com/ixofoundation/ixo-blockchain) PROJECT
 
 # ixo-tendermint
 
